@@ -32,6 +32,7 @@ export default class OrderController{
         } catch (err) {
             console.log(err);
         }
+        console.log("event", event);
 
         if (event.type === 'checkout.session.completed') {
             const session = event.data.object; 
