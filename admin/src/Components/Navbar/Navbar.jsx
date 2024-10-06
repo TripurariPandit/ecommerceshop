@@ -1,5 +1,5 @@
 import React from 'react';
-import './NavBar.css';
+import './Navbar.css';
 import navlogo from '../../assets/nav-logo.svg';
 import navProfile from '../../assets/nav-profile.svg';
 const NavBar = ()=>{
