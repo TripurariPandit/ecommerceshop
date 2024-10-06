@@ -226,8 +226,8 @@
     .nav-dropdown{
         display: block;
         width: 1.6rem;
-        rotate: -90deg;
-        transition: 0.5s;
+        transform: rotate(-90deg);
+        transition: 0.3s;
         cursor: pointer;
     }
 
@@ -238,16 +238,17 @@
         position: absolute;
         background-color: white;
         justify-content: center;
-        top: 3.2rem;
+        top: 4.3rem;
         padding: 0;
+        z-index: 10;
     }
 
     .nav-menu-visible{
         display: flex;
     }
 
-    .nav-dropdown.opne{
-        transform: rotate(90deg);
+    .nav-dropdown.open{
+        transform: rotate(0deg);
     }
 }
 
@@ -263,7 +264,7 @@
 
     .nav-menus{
         height: 4rem;
-        top: 3rem;
+        top: 4rem;
     }
 
     .nav-login-cart{

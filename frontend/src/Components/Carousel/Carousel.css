@@ -1,6 +1,7 @@
 .carousel-container{
     width: 97%;
     margin: 1rem auto;
+    z-index: 1;
 }
 
 .slide div{
@@ -17,4 +18,22 @@
 
 .carousel .control-arrow:hover {
     background: none !important;
+}
+
+@media(max-width:1024px){
+    .slide div{
+        height: 40vh;
+    }
+}
+
+@media(max-width:800px){
+    .slide div{
+        height: 35vh;
+    }
+}
+
+@media(max-width:500px){
+    .slide div{
+        height: 30vh;
+    }
 }

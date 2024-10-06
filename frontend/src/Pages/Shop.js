@@ -11,7 +11,7 @@ const Shop = ()=>{
         <>
             <MyCarousel />
             <Hero />
-            <Popular />
+            <Popular /> 
             <Offers />
             <NewCollections />
             <NewsLetter />
