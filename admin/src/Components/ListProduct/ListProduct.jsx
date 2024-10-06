@@ -6,7 +6,7 @@ const ListProduct = () => {
     const [allProducts, setAllProducts] = useState([]);
     const fetchData = async () => {
         try{
-            const response = await fetch('http://localhost:4000/api/products');
+            const response = await fetch('https://ecommerceshops.onrender.com/api/products');
             const data = await response.json();
             setAllProducts(data);
         } catch(err){
@@ -20,7 +20,7 @@ const ListProduct = () => {
 
     const removeProduct = async (id)=>{
         try{
-            const response = await fetch(`http://localhost:4000/api/products/${id}`, {
+            const response = await fetch(`https://ecommerceshops.onrender.com/api/products/${id}`, {
                 method: 'DELETE',
                 headers: {
                     'Content-Type': 'application/json'
@@ -37,32 +37,6 @@ const ListProduct = () => {
     }
     return (
         <div className='list-product'>
-            {/* <h1>All Products List</h1>
-            <div className='listproduct-format-main'>
-                <p>Products</p>
-                <p>Title</p>
-                <p>Old Price</p>
-                <p>New Price</p>
-                <p>Category</p>
-                <p>Remove</p>
-            </div>
-            <div className='listproduct-allproducts'>
-                <hr />
-                {allProducts.map((product)=>{
-                        return(
-                            <div key={product._id} className='listproduct-format-main listproduct-format'>
-                                <img src={product.imageUrl} alt='' className='listproduct-product-icon' />
-                                <p>{product.name}</p>
-                                <p>{product.old_price}</p>
-                                <p>{product.new_price}</p>
-                                <p>{product.category}</p>
-                                <img src={cross_icon} alt='' className='listproduct-remove-icon'/>
-                            </div>
-                        )
-                    })}
-            </div> */}
-
-
             <h1>All Products List</h1>
             <table className='listproduct-table'>
                 <thead>
@@ -78,7 +52,7 @@ const ListProduct = () => {
                 <tbody>
                     {allProducts.map((product) => (
                         <tr key={product._id}>
-                            <td><img src={`http://localhost:4000/uploads/${product.imageUrl}`} alt='' className='listproduct-product-icon' /></td>
+                            <td><img src={`https://ecommerceshops.onrender.com/uploads/${product.imageUrl}`} alt='' className='listproduct-product-icon' /></td>
                             <td>{product.name}</td>
                             <td>{product.old_price}</td>
                             <td>{product.new_price}</td>
@@ -90,7 +64,7 @@ const ListProduct = () => {
             </table>
 
         </div>
-    )
+    );
 }
 
 export default ListProduct;

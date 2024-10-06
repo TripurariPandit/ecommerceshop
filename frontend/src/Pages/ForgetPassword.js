@@ -19,7 +19,7 @@ const ForgetPassword = () => {
                 alert("passord should be match");
                 return;
             }
-            const response = await fetch('https://shoper-lvz1.onrender.com/api/users/reset-password', {
+            const response = await fetch('https://ecommerceshops.onrender.com/api/users/reset-password', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

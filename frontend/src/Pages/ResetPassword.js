@@ -23,7 +23,7 @@ const ResetPassword = () => {
                 alert("passord should be match");
                 return;
             }
-            const response = await fetch('https://shoper-lvz1.onrender.com/users/reset', {
+            const response = await fetch('https://ecommerceshops.onrender.com/users/reset', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

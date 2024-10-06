@@ -5,7 +5,7 @@ const Popular = ()=>{
     const [popularInWomen, setPopularInWomen] = useState([]);
     const getPopularInWomen = async ()=>{
         try{
-            const response = await fetch('https://shoper-lvz1.onrender.com/api/products/popularinwomen');
+            const response = await fetch('https://ecommerceshops.onrender.com/api/products/popularinwomen');
             const data = await response.json();
             setPopularInWomen(data);
         } catch(err){

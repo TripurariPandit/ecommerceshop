@@ -6,7 +6,7 @@ const NewCollections = ()=>{
     const [newCollections, setNewCollections] = useState([]);
     const getNewCollections = async ()=>{
         try{
-            const response = await fetch("https://shoper-lvz1.onrender.com/api/products/newcollections");
+            const response = await fetch("https://ecommerceshops.onrender.com/api/products/newcollections");
             const data = await response.json();
             setNewCollections(data);
         } catch(err){

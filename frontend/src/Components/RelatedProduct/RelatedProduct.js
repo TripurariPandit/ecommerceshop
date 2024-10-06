@@ -9,7 +9,7 @@ const RelatedProduct = ()=>{
     const {productId} = useParams();
     const getRelatedProducts = async (productId)=>{
         try{
-            const response = await fetch(`https://shoper-lvz1.onrender.com/api/products/relatedproduct/${productId}`);
+            const response = await fetch(`https://ecommerceshops.onrender.com/api/products/relatedproduct/${productId}`);
             const data = await response.json();
             setRelatedProducts(data);
         } catch(err){

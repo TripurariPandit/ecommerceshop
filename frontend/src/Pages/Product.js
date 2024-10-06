@@ -9,7 +9,7 @@ const Product = ()=>{
     const [product, setProduct] = useState({});
     const getProductById = async (productId)=>{
         try{
-            const response = await fetch(`https://shoper-lvz1.onrender.com/api/products/${productId}`);
+            const response = await fetch(`https://ecommerceshops.onrender.com/api/products/${productId}`);
             const data = await response.json();
             setProduct(data);
         } catch(err){

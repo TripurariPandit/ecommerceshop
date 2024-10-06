@@ -8,7 +8,7 @@ const ShopContextProvider = (props) => {
 
     const getAllProducts = async () => { 
         try {
-            const response = await fetch('https://shoper-lvz1.onrender.com/api/products');
+            const response = await fetch('https://ecommerceshops.onrender.com/api/products');
             const data = await response.json();
             setAll_product(data);
         } catch (err) {
@@ -20,7 +20,7 @@ const ShopContextProvider = (props) => {
         try {
             const token = localStorage.getItem('auth-token');
             if (!token) return
-            const response = await fetch('https://shoper-lvz1.onrender.com/api/cartitems', {
+            const response = await fetch('https://ecommerceshops.onrender.com/api/cartitems', {
                 method: 'GET',
                 headers: {
                     'Content-Type': 'application/json',
@@ -69,7 +69,7 @@ const ShopContextProvider = (props) => {
                 window.location.replace('/login');
                 return;
             }
-            const response = await fetch('https://shoper-lvz1.onrender.com/api/cartitems', {
+            const response = await fetch('https://ecommerceshops.onrender.com/api/cartitems', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -95,7 +95,7 @@ const ShopContextProvider = (props) => {
                 window.location.replace('/login');
                 return;
             }
-            const response = await fetch('https://shoper-lvz1.onrender.com/api/cartitems/decrease', {
+            const response = await fetch('https://ecommerceshops.onrender.com/api/cartitems/decrease', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -116,7 +116,7 @@ const ShopContextProvider = (props) => {
     const removeFromCart = async (cartItemId, size) => {
         try {
             const token = localStorage.getItem('auth-token');
-            await fetch(`https://shoper-lvz1.onrender.com/api/cartitems/${cartItemId}?size=${size}`, {
+            await fetch(`https://ecommerceshops.onrender.com/api/cartitems/${cartItemId}?size=${size}`, {
                 method: 'DELETE',
                 headers: {
                     'Content-Type': 'application/json',

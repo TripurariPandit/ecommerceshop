@@ -14,7 +14,7 @@ const ForgetPasswordEmail = ()=>{
     const handleForgetPassword = async (e)=>{
         try{
             e.preventDefault();
-            const response = await fetch("https://shoper-lvz1.onrender.com/api/users/forget-password",{
+            const response = await fetch("https://ecommerceshops.onrender.com/api/users/forget-password",{
                 method: "POST",
                 headers:{
                     "Content-Type": "application/json"

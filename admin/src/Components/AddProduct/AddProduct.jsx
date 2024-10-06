@@ -46,7 +46,7 @@ const AddProduct = () => {
         formData.append('sizes', productDetails.sizes);
         
 
-        const res = await fetch("http://localhost:4000/api/products", {
+        const res = await fetch("https://ecommerceshops.onrender.com/api/products", {
             method: 'POST',
             body: formData
         });

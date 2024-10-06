@@ -9,7 +9,7 @@ const MyOrders = ()=>{
     /* This function will give you all orders of a user */
     const getUserOrders = async ()=>{
         try{
-            const response = await fetch('https://shoper-lvz1.onrender.com/api/orders', {
+            const response = await fetch('https://ecommerceshops.onrender.com/api/orders', {
                 method: 'GET',
                 headers: {
                     'Content-Type': 'application/json',
@@ -47,7 +47,7 @@ const MyOrders = ()=>{
                                         {product.sizes.map(({size, quantity}, index)=>{
                                             return(
                                                 <div key={index} className='my-orders-order'>
-                                                <img src={`https://shoper-lvz1.onrender.com/uploads/${product.productId.imageUrl}`} alt='' />
+                                                <img src={`https://ecommerceshops.onrender.com/${product.productId.imageUrl}`} alt='' />
                                                 <div>
                                                     <p>{product.productId.name}</p>
                                                     <p>Size: {size} &nbsp; &nbsp; &nbsp;  Quantity: {quantity}</p>

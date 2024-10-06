@@ -30,7 +30,7 @@ const PlaceOrder = () => {
                 amount: getTotalCartAmount(),
                 quantity: totalCartItem()
             }  
-            const response = await fetch('https://shoper-lvz1.onrender.com/api/orders/placeorder', {
+            const response = await fetch('https://ecommerceshops.onrender.com/api/orders/placeorder', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

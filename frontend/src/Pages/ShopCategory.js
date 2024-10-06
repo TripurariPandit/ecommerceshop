@@ -8,7 +8,7 @@ const ShopCategory = (props) => {
 
     const getProductByCategory = async (category) => {
         try {
-            const response = await fetch(`https://shoper-lvz1.onrender.com/api/products/category?category=${category}`);
+            const response = await fetch(`https://ecommerceshops.onrender.com/api/products/category?category=${category}`);
             const data = await response.json();
             setProducts(data);
         } catch (err) {

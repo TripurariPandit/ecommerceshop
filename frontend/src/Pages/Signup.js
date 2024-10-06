@@ -17,7 +17,7 @@ const Signup = () => {
     const signup = async (e) => {
         e.preventDefault(); 
         try {
-            const response = await fetch('https://shoper-lvz1.onrender.com/api/users/signup', {
+            const response = await fetch('https://ecommerceshops.onrender.com/api/users/signup', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

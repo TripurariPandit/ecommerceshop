@@ -10,7 +10,7 @@ const Verify = ()=>{
     const orderId = searchParams.get("orderId");
     const verifyPayment = async ()=>{
         try {
-            const response = await fetch('https://shoper-lvz1.onrender.com/api/orders/verify-payment', {
+            const response = await fetch('https://ecommerceshops.onrender.com/api/orders/verify-payment', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

@@ -17,7 +17,7 @@ const Login = () => {
     const login = async (e) => {
         e.preventDefault(); 
         try {
-            const response = await fetch('https://shoper-lvz1.onrender.com/api/users/signin', {
+            const response = await fetch('https://ecommerceshops.onrender.com/api/users/signin', {
                 method: 'POST',
                 headers: { 
                     'Content-Type': 'application/json',

@@ -32,7 +32,7 @@ const CartItems = () => {
                     return item.sizes.map(({size, quantity, _id}) => {
                         return <div key={_id}>
                             <div className="cartitems-format cartitems-format-main">
-                                <img src={`https://shoper-lvz1.onrender.com/uploads/${item.productId?.imageUrl}`} alt="" className="carticon-product-icon" />
+                                <img src={`https://ecommerceshops.onrender.com/uploads/${item.productId?.imageUrl}`} alt="" className="carticon-product-icon" />
                                 <p>{item.productId?.name}</p>
                                 <p>${item.productId?.new_price}</p>
                                 <div className="cart-quantity-container" >

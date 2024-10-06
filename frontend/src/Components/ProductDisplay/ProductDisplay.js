@@ -14,13 +14,13 @@ const ProductDisplay = (props) => {
         <div className="productdisplay">
             <div className="productdisplay-left">
                 <div className="productdisplay-img-list">
-                    <img src={`https://shoper-lvz1.onrender.com/uploads/${imageUrl}`} alt="" />
-                    <img src={`https://shoper-lvz1.onrender.com/uploads/${imageUrl}`} alt="" />
-                    <img src={`https://shoper-lvz1.onrender.com/uploads/${imageUrl}`} alt="" />
-                    <img src={`https://shoper-lvz1.onrender.com/uploads/${imageUrl}`} alt="" />
+                    <img src={`https://ecommerceshops.onrender.com/uploads/${imageUrl}`} alt="" />
+                    <img src={`https://ecommerceshops.onrender.com/uploads/${imageUrl}`} alt="" />
+                    <img src={`https://ecommerceshops.onrender.com/uploads/${imageUrl}`} alt="" />
+                    <img src={`https://ecommerceshops.onrender.com/uploads/${imageUrl}`} alt="" />
                 </div>
                 <div className="productdisplay-img">
-                    <img className="productdisplay-main-img" src={`https://shoper-lvz1.onrender.com/uploads/${imageUrl}`} alt="" />
+                    <img className="productdisplay-main-img" src={`https://ecommerceshops.onrender.com/uploads/${imageUrl}`} alt="" />
                 </div>
             </div>
             <div className="productdisplay-right">
