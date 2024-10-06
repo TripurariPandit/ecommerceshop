@@ -1,0 +1,20 @@
+.carousel-container{
+    width: 97%;
+    margin: 1rem auto;
+}
+
+.slide div{
+    height: 50vh;
+}
+
+.slide div img{
+    height: 100%;
+}
+
+.carousel .control-arrow {
+    background: none !important;
+}
+
+.carousel .control-arrow:hover {
+    background: none !important;
+}
