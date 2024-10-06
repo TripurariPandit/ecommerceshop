@@ -9,7 +9,7 @@ const orderModel = mongoose.model('Orders', orderSchema);
 export default class OrderRepository {
     placeOrder = async (userId, products, amount, address, quantity) => {
         try {
-            const frontendUrl = "https://ecommshopes.netlify.app/";
+            const frontendUrl = "https://ecommshopes.netlify.app";
             const newOrder = new orderModel({
                 userId: userId,
                 products: products,
