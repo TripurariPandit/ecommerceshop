@@ -21,9 +21,6 @@ export default class OrderController{
     }
 
     handleStripeWebhook = async (req, res) => {
-        console.log("hello from handleStripeWebhook");
-        console.log("Raw request body:", req.body);
-        console.log("Stripe signature:", req.headers['stripe-signature']);
         const sig = req.headers['stripe-signature'];
         let event;
         try {
@@ -35,7 +32,6 @@ export default class OrderController{
         } catch (err) {
             console.log(err);
         }
-        console.log("event", event.type);
 
         if (event.type === 'checkout.session.completed') {
             const session = event.data.object; 
@@ -58,7 +54,6 @@ export default class OrderController{
     verifyPayment = async (req, res)=>{
         try{
             const {orderId} = req.body;
-            console.log("orderId: ", orderId);
             const order = await this.orderRepository.getOrderById(orderId);
             if (!order) {
                 return res.status(404).json({ message: "Order not found" });

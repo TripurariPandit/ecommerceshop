@@ -8,7 +8,6 @@ const stripe = new Stripe(process.env.STRIPE_SECRET_KEY);
 const orderModel = mongoose.model('Orders', orderSchema);
 export default class OrderRepository {
     placeOrder = async (userId, products, amount, address, quantity) => {
-        console.log("hello from place order");
         try {
             const frontendUrl = "https://ecommshopes.netlify.app";
             const newOrder = new orderModel({

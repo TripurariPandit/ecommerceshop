@@ -19,7 +19,6 @@ const MyOrders = ()=>{
             const data = await response.json();
             console.log(response);
             setOrders(data); 
-            console.log(data);
         } catch(err){  
             console.log(err);
         }
@@ -47,7 +46,7 @@ const MyOrders = ()=>{
                                         {product.sizes.map(({size, quantity}, index)=>{
                                             return(
                                                 <div key={index} className='my-orders-order'>
-                                                <img src={`https://ecommerceshops.onrender.com/${product.productId.imageUrl}`} alt='' />
+                                                <img src={`https://ecommerceshops.onrender.com/uploads/${product.productId.imageUrl}`} alt='' />
                                                 <div>
                                                     <p>{product.productId.name}</p>
                                                     <p>Size: {size} &nbsp; &nbsp; &nbsp;  Quantity: {quantity}</p>
