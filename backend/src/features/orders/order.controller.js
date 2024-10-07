@@ -22,6 +22,8 @@ export default class OrderController{
 
     handleStripeWebhook = async (req, res) => {
         console.log("hello from handleStripeWebhook");
+        console.log("Raw request body:", req.body);
+        console.log("Stripe signature:", req.headers['stripe-signature']);
         const sig = req.headers['stripe-signature'];
         let event;
         try {
@@ -33,7 +35,7 @@ export default class OrderController{
         } catch (err) {
             console.log(err);
         }
-        console.log("event", event);
+        console.log("event", event.type);
 
         if (event.type === 'checkout.session.completed') {
             const session = event.data.object; 
