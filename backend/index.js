@@ -17,7 +17,6 @@ app.use('/api/order', webhookRouter);
 app.use(express.json());
 app.use('/uploads', express.static('uploads'));
 
-
 app.get("/", (req, res)=>{
     return res.send("express is running");
 });

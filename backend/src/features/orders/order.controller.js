@@ -30,7 +30,7 @@ export default class OrderController{
             event = stripe.webhooks.constructEvent(
                 req.body, 
                 sig,
-                process.env.STRIPE_WEBHOOK_SECRET
+                process.env.STRIPE_WEBHOOK_SECRET_LIVE
             );
         } catch (err) {
             console.log(err);
