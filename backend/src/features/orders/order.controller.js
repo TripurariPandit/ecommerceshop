@@ -21,6 +21,7 @@ export default class OrderController{
     }
 
     handleStripeWebhook = async (req, res) => {
+        console.log("hello from handleStripeWebhook");
         const sig = req.headers['stripe-signature'];
         let event;
         try {
@@ -55,7 +56,7 @@ export default class OrderController{
     verifyPayment = async (req, res)=>{
         try{
             const {orderId} = req.body;
-            console.log(orderId);
+            console.log("orderId: ", orderId);
             const order = await this.orderRepository.getOrderById(orderId);
             if (!order) {
                 return res.status(404).json({ message: "Order not found" });
